@@ -27,4 +27,14 @@ class Stack:
             return item_to_remove.get_value()
         print("This stack is totally empty.")
 
-    
+    def peek(self):
+        if not self.is_empty():
+            return self.top_item.get_value()
+        print("Nothing to see here!")
+
+    def has_space(self):
+        return self.limit > self.size
+
+    def is_empty(self):
+        return self.size == 0
+
